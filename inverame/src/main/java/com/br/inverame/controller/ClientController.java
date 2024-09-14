@@ -35,7 +35,7 @@ public class ClientController {
             .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/cadastro")
     public ResponseEntity<Client> createClient(@RequestBody Client client){
         try {
             Client savedClient = clientService.createClient(client);
